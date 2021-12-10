@@ -1,0 +1,23 @@
+:root {
+  --primary-text-color: #212121;
+  --secodary-text-color: #757575;
+  --third-text-color: #2196f3;
+  --fourth-text-color: rgba(255, 255, 255, 0.6);
+  --fifth-text-color: #ffffff;
+  --primary-bg-color: #ffffff;
+  --secondary-bg-color: #2f303a;
+  --bg-color-effect: #2196f3;
+  --third-bg-color: #f5f4fa;
+  --fourth-bg-color: #188ce8;
+  --fifth-bg-color: #afb1b8;
+  --sixth-bg-color: rgba(255, 255, 255, 0.1);
+  --animation-timing: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-duration: 250ms;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  color: var(--primary-text-color);
+  background-color: var(--primary-bg-color);
+}

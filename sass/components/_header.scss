@@ -1,0 +1,141 @@
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header__block {
+  display: flex;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-menu__nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+.header-menu__item {
+  position: relative;
+  margin-right: 50px;
+  &::after {
+    position: absolute;
+    bottom: 0;
+
+    content: "";
+    display: block;
+    width: 0%;
+    height: 4px;
+
+    background: var(--bg-color-effect);
+    border-radius: 2px;
+
+    transition: width var(--transition-duration) var(--animation-timing);
+  }
+  &:hover::after,
+  &:focus::after {
+    width: 100%;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.header-menu__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+
+  transition-property: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--animation-timing);
+  &:hover,
+  &:focus {
+    color: var(--third-text-color);
+  }
+}
+
+.header-menu__link--current {
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: var(--third-text-color);
+  transition: width var(--transition-duration) var(--animation-timing);
+  &::after {
+    position: absolute;
+    bottom: 0;
+
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+
+    background: var(--bg-color-effect);
+    border-radius: 2px;
+  }
+}
+
+.header-contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-contacts__item {
+  margin-right: 0;
+  & + & {
+    margin-left: 50px;
+  }
+}
+
+.header-contacts__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--secodary-text-color);
+  transition-property: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--animation-timing);
+  &:hover,
+  &:focus {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--third-text-color);
+  }
+  &:hover svg,
+  &:focus svg {
+    fill: var(--bg-color-effect);
+  }
+}
+
+.header-contacts__img--envelope {
+  margin-right: 10px;
+  width: 16px;
+  height: 12px;
+  fill: #757575;
+}
+
+.header-contacts__img--smartphone {
+  margin-right: 10px;
+  width: 10px;
+  height: 16px;
+  fill: #757575;
+}

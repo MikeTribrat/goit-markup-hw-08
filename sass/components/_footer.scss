@@ -1,12 +1,15 @@
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
   background-color: var(--secondary-bg-color);
 }
 
 .footer__block {
-  align-items: baseline;
-  display: flex;
+  @media screen and(min-width: 1200px) {
+    align-items: baseline;
+    display: flex;
+  }
+  @media screen and(max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .footer-contacts {
@@ -14,6 +17,9 @@
 }
 
 .footer-contacts__item {
+  @media screen and(min-width: 480px) {
+    margin-top: 8px;
+  }
   margin-top: 9px;
   &:first-child {
     margin-top: 0px;
@@ -40,6 +46,10 @@
 /* Footer social net / Футер соц сети */
 
 .footer-social-net__block {
+  @media screen and(max-width: 1199px) {
+    margin-top: 60px;
+    margin-left: 0px;
+  }
   margin-left: 70px;
 }
 
@@ -87,7 +97,10 @@
 /* Footer subsribe form / Футер секция подписка */
 
 .footer-subscribe {
-  margin-left: 93px;
+  @media screen and(min-width: 1200px) {
+    margin-left: 93px;
+  }
+  margin-top: 60px;
 }
 
 .footer-subscribe__title {
@@ -100,10 +113,20 @@
 }
 
 .footer-subscribe__item {
-  display: flex;
+  @media screen and(min-width: 480px) {
+    align-items: center;
+  }
+  @media screen and(min-width: 1200px) {
+    display: flex;
+  }
 }
 
 .footer-subscribe__input {
+  @media screen and(max-width: 1199px) {
+    width: 450px;
+    margin-bottom: 20px;
+    margin-right: 0px;
+  }
   letter-spacing: 0.03em;
   padding-left: 16px;
   margin-right: 15px;

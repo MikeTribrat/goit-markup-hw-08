@@ -15,6 +15,7 @@
 </head>
 <body>
   <!-- Секция шапка / Page header -->
+  <!--
   <header class="header">
     <div class="container header__block">
       <nav class="header-menu">
@@ -43,17 +44,21 @@
       </ul>
     </div>
   </header>
+  -->
   <main>
+    
     <!-- Секция герой / Hero section -->
-    <section class="hero hero__overlay">
+    <!--
+        <section class="hero hero__overlay">
       <div class="container hero__block">
       <h1 class="hero__title">ЭФФЕКТИВНЫЕ РЕШЕНИЯ<br> ДЛЯ ВАШЕГО БИЗНЕСА</h1>
       <button type="button" class="hero__button" data-modal-open>Заказать услугу</button>
       </div>
     </section>
+    -->
     <!-- Секция наши преимущества / Our advantages section -->
-    <section class="advantages-section">
-      <div class="advantages-section__block">
+    <section class="section">
+      <div class="container">
         <h2 class="visually-hidden advantages-section__title">Наши преимущества</h2>
         <ul class="advantages-section__list">
           <li class="advantages-section__card">
@@ -122,7 +127,9 @@
         <h2 class="team-section__title">Наша команда</h2>
         <ul class="team-section__list">
           <li class="staff-card">
-            <img class="staff-card__img" src="./images/img(3).jpg" width="270" alt="product designer">
+            <img class="staff-card__img" 
+            srcset="./images/staff1@1.jpg 1x, ./images/staff1@2.jpg 2x"
+            src="./images/staff1@1.jpg" width="270" alt="product designer">
             <div class="staff-card__text-block">
               <h3 class="staff-card__name">Игорь Демьяненко</h3>
               <p class="staff-card__position">Product Designer</p>
@@ -159,7 +166,8 @@
             </div>
           </li>
           <li class="staff-card">
-            <img class="staff-card__img"src="./images/img(4).jpg" width="270" alt="frontend developer">
+            <img class="staff-card__img" 
+            srcset="./images/staff2@2.jpg" src="./images/staff2@1.jpg" width="270" alt="product designer">
             <div class="staff-card__text-block">
               <h3 class="staff-card__name">Ольга Репина</h3>
               <p class="staff-card__position">Frontend Developer</p>
@@ -196,7 +204,8 @@
             </div>
           </li>
           <li class="staff-card">
-            <img class="staff-card__img" src="./images/img(5).jpg" width="270" alt="marketing">
+            <img class="staff-card__img" 
+            srcset="./images/staff3@2.jpg" src="./images/staff3@1.jpg" width="270" alt="product designer">
             <div class="staff-card__text-block">
               <h3 class="staff-card__name">Николай Тарасов</h3>
               <p class="staff-card__position">Marketing</p>
@@ -233,7 +242,8 @@
             </div>
           </li>
           <li class="staff-card">
-            <img class="staff-card__img" src="./images/img(6).jpg" width="270" alt="ui designer">
+            <img class="staff-card__img" 
+            srcset="./images/staff4@2.jpg" src="./images/staff4@1.jpg" width="270" alt="product designer">
             <div class="staff-card__text-block">
               <h3 class="staff-card__name">Михаил Ермаков</h3>
               <p class="staff-card__position">UI Designer</p>
@@ -274,7 +284,7 @@
     </section>
         <!-- Секция наши клиенты / Our clients section -->
         <section class="section clients-section">
-          <div class="clients-section__block">
+          <div class="container clients-section__block">
             <h2 class="clients-section__title">Постоянные клиенты</h2>
             <ul class="clients-section__list">
               <li class="clients-card">
@@ -324,7 +334,7 @@
         </section>
   </main>
   <!-- Футер / Footer -->
-  <footer class="footer">
+  <footer class="section footer">
     <div class="container footer__block">
       <div class="footer-menu">
       <a href="./" class="footer-menu__logo">Web<span class="footer-menu__logo--theme-white">Studio</span>

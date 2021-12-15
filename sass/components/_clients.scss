@@ -1,4 +1,7 @@
 .clients-section__title {
+  @media screen and(max-width: 1199px) {
+    margin-bottom: 30px;
+  }
   margin-bottom: 50px;
   text-align: center;
   font-weight: 700;
@@ -8,20 +11,45 @@
 }
 
 .clients-section__list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @media screen and(max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  @media screen and(min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .clients-card {
-  margin-left: 30px;
-  width: 170px;
-  height: 92px;
-  &:first-child {
-    margin-left: 0px;
-    width: 170px;
-    height: 92px;
+  @media (max-width: 767px) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin-right: 15px;
+    margin-left: 15px;
+    &:nth-child(1n + 3) {
+      margin-top: 30px;
+    }
   }
+  @media (min-width: 768px) {
+    width: calc((100% - 6 * 15px) / 3);
+    margin-right: 15px;
+    margin-left: 15px;
+    &:nth-child(1n + 4) {
+      margin-top: 30px;
+    }
+  }
+  & + & {
+    @media (min-width: 1200px) {
+      margin-left: 30px;
+      width: 170px;
+    }
+  }
+  height: 92px;
 }
 
 .clients-card__link {

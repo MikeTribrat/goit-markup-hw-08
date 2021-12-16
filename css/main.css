@@ -619,7 +619,7 @@ ul {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .header {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -627,6 +627,7 @@ ul {
 }
 
 .header__block {
+  align-items: center;
   display: flex;
 }
 
@@ -723,14 +724,14 @@ ul {
   margin-left: auto;
 }
 
-@media screen and (max-width: 1199px) {
-  .header-contacts {
-    display: none;
-  }
-}
-
 .header-contacts__item {
   margin-right: 0;
+}
+
+@media screen and (max-width: 1199px) {
+  .header-contacts__item {
+    display: none;
+  }
 }
 
 .header-contacts__item + .header-contacts__item {
@@ -778,6 +779,28 @@ ul {
   width: 10px;
   height: 16px;
   fill: #757575;
+}
+
+.mobile-menu {
+  transition-property: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--animation-timing);
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-menu {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+.mobile-menu:hover, .mobile-menu:focus {
+  fill: var(--bg-color-effect);
 }
 
 .hero {
@@ -878,10 +901,22 @@ ul {
   color: var(--primary-text-color);
 }
 
+@media screen and (max-width: 1199px) {
+  .modal-form__text {
+    line-height: 1.5;
+  }
+}
+
 .modal-form__field {
-  display: flex;
-  flex-direction: column;
   margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
 }
 
 .modal-form__label {
@@ -914,6 +949,13 @@ ul {
   transition: border var(--transition-duration) var(--animation-timing);
 }
 
+@media screen and (max-width: 1199px) {
+  .modal-form__input {
+    width: 370px;
+    height: 40px;
+  }
+}
+
 .modal-form__input:hover, .modal-form__input:focus {
   border: 1px solid var(--bg-color-effect);
   cursor: pointer;
@@ -922,6 +964,10 @@ ul {
 .modal-form__input:hover + .modal-form__icon,
 .modal-form__input:focus + .modal-form__icon {
   fill: var(--bg-color-effect);
+}
+
+.modal-form__input:active {
+  border: 1px solid var(--bg-color-effect);
 }
 
 .modal-form__icon {
@@ -941,6 +987,20 @@ ul {
   padding-left: 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+}
+
+@media screen and (max-width: 1199px) {
+  .modal-form__textarea {
+    width: 370px;
+    height: 140px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    color: var(--secodary-text-color);
+  }
 }
 
 .modal-form__textarea:hover, .modal-form__textarea:focus {
@@ -976,6 +1036,18 @@ ul {
   margin-top: 20px;
 }
 
+.modal-form__field-comment {
+  margin-bottom: 4px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__field-comment {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+}
+
 .submit-area__item {
   margin-bottom: 30px;
   font-weight: 400;
@@ -983,6 +1055,18 @@ ul {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--secodary-text-color);
+}
+
+@media screen and (max-width: 1199px) {
+  .submit-area__item {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    color: var(--secodary-text-color);
+  }
 }
 
 .submit-area__checkbox {
@@ -1052,6 +1136,13 @@ ul {
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
 }
 
 .modal__button--close {
@@ -1283,6 +1374,138 @@ ul {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.backdrop-mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: background-color var(--transition-duration) var(--animation-timing), opacity var(--transition-duration) var(--animation-timing), box-shadow var(--transition-duration) var(--animation-timing);
+}
+
+.backdrop-mobile__is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-mobile-menu {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-bg-color);
+}
+
+.mobile-menu-button {
+  display: flex;
+  border: transparent;
+  background-color: var(--primary-bg-color);
+  transition: fill var(--transition-duration) var(--animation-timing);
+  cursor: pointer;
+}
+
+.mobile-menu-button:hover, .mobile-menu-button:focus {
+  fill: var(--bg-color-effect);
+}
+
+.modal-mobile__button--close {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 19px;
+  right: 18px;
+  border: transparent;
+  background: var(--primary-bg-color);
+  cursor: pointer;
+  transition: fill var(--transition-duration) var(--animation-timing);
+}
+
+.modal-mobile__button--close:hover, .modal-mobile__button--close:focus {
+  fill: var(--bg-color-effect);
+}
+
+.mobile__menu {
+  padding-top: 40px;
+  padding-right: 48px;
+  padding-bottom: 40px;
+  padding-left: 48px;
+}
+
+.mobile-menu__link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: var(--primary-text-color);
+}
+
+.mobile-menu__link:focus, .mobile-menu__link:hover {
+  color: var(--third-text-color);
+}
+
+.mobile-menu__item {
+  padding-bottom: 32px;
+}
+
+.mobile-menu__item:last-child {
+  padding-bottom: 302px;
+}
+
+.mobile-menu-contacts__item {
+  padding-bottom: 32px;
+}
+
+.mobile-menu-contacts__item:last-child {
+  padding-bottom: 64px;
+}
+
+.mobile-menu-contacts__phone {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--third-text-color);
+}
+
+.mobile-menu-contacts__mail {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: var(--secodary-text-color);
+}
+
+.current-mobile-menu {
+  color: var(--third-text-color);
+}
+
+.mobile-menu-social-contacts {
+  display: flex;
+}
+
+.mobile-menu-social-contacts__link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--third-text-color);
+}
+
+.mobile-menu-social-contacts__decor {
+  color: rgba(33, 33, 33, 0.2);
 }
 
 .visually-hidden {

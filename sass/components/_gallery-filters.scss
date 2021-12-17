@@ -45,12 +45,23 @@
 }
 
 .gallery-section__filters-list {
+  @media screen and(min-width: 768px) {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 .filters-list__item {
+  @media screen and(max-width: 767px) {
+    margin-bottom: 15px;
+    &:nth-child(1n + 4) {
+      margin-bottom: 0;
+    }
+  }
   margin-right: 8px;
   &:last-child {
     margin-right: 0;

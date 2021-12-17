@@ -489,19 +489,36 @@ ul {
 
 .gallery-section__filters-list {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery-section__filters-list {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
 }
 
 .filters-list__item {
   margin-right: 8px;
 }
 
+@media screen and (max-width: 767px) {
+  .filters-list__item {
+    margin-bottom: 15px;
+  }
+  .filters-list__item:nth-child(1n + 4) {
+    margin-bottom: 0;
+  }
+}
+
 .filters-list__item:last-child {
   margin-right: 0;
 }
 
-.gallery-section {
+/*.gallery-section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -512,16 +529,23 @@ ul {
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
-}
-
-.gallery-section__list {
-  display: flex;
-  flex-wrap: wrap;
+}*/
+@media screen and (min-width: 768px) {
+  .gallery-section__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .gallery-section__card {
   margin-left: 30px;
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .gallery-section__card {
+    margin-left: 0;
+  }
 }
 
 .gallery-section__card:nth-child(1n + 7) {
@@ -558,6 +582,13 @@ ul {
   height: auto;
 }
 
+@media screen and (max-width: 768px) {
+  .card__img {
+    width: 100%;
+    height: 294px;
+  }
+}
+
 .card-image__overlay-text {
   padding-top: 63px;
   padding-right: 24px;
@@ -571,7 +602,7 @@ ul {
   letter-spacing: 0.03em;
   color: var(--fifth-text-color);
   position: absolute;
-  width: 370px;
+  width: 100%;
   top: 0;
   left: 0;
   pointer-events: none;
@@ -815,10 +846,22 @@ ul {
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/img(16).jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header_desktop@1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media (max-width: 767px) {
+  .hero__overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header_mobile@1.jpg");
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .hero__overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header_tablet@1.jpg");
+  }
 }
 
 .hero__title {

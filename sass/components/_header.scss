@@ -105,19 +105,30 @@
 .header-contacts {
   display: flex;
   margin-left: auto;
+  @media screen and(min-width: 768px) and (max-width: 1199px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .header-contacts__item {
-  @media screen and(max-width: 1199px) {
+  @media screen and(max-width: 767px) {
     display: none;
   }
   margin-right: 0;
   & + & {
     margin-left: 50px;
+    @media screen and(min-width: 768px) and (max-width: 1199px) {
+      margin-left: 0;
+    }
   }
 }
 
 .header-contacts__link {
+  @media screen and(min-width: 768px) and (max-width: 1199px) {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
   display: flex;
   align-items: center;
   justify-content: center;

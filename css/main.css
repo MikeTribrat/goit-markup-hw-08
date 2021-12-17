@@ -105,7 +105,6 @@ ul {
 @media (min-width: 768px) and (max-width: 1199px) {
   .advantages-section__card {
     width: calc((100% - 4 * 15px) / 2);
-    margin-bottom: 30px;
   }
   .advantages-section__card:nth-child(1n + 3) {
     margin-bottom: 0px;
@@ -473,16 +472,22 @@ ul {
 }
 
 .gallery-section__filters-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .gallery-section__filters-list {
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .gallery-section__filters-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
   }
 }
 
@@ -496,6 +501,9 @@ ul {
   }
   .filters-list__item:nth-child(1n + 4) {
     margin-bottom: 0;
+  }
+  .filters-list__item:nth-child(3n + 3) {
+    margin-right: 0;
   }
 }
 
@@ -515,6 +523,11 @@ ul {
   margin-right: auto;
   width: 1200px;
 }*/
+.gallery-section__list {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
 @media screen and (min-width: 768px) {
   .gallery-section__list {
     display: flex;
@@ -523,22 +536,44 @@ ul {
 }
 
 .gallery-section__card {
-  margin-left: 30px;
-  margin-bottom: 30px;
+  margin: 15px;
 }
 
 @media screen and (max-width: 767px) {
   .gallery-section__card {
-    margin-left: 0;
+    margin-top: 0;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+  }
+  .gallery-section__card:last-child {
+    margin-bottom: 0;
   }
 }
 
-.gallery-section__card:nth-child(1n + 7) {
-  margin-bottom: 0px;
+@media screen and (min-width: 1200px) {
+  .gallery-section__card {
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+  .gallery-section__card:nth-child(1n + 7) {
+    margin-bottom: 0px;
+  }
+  .gallery-section__card:nth-child(3n + 1) {
+    margin-top: 0;
+  }
 }
 
-.gallery-section__card:nth-child(3n + 1) {
-  margin-left: 0;
+@media screen and (min-width: 768px) {
+  .gallery-section__card {
+    width: calc((100% - 4 * 15px) / 2);
+  }
+  .gallery-section__card:first-child {
+    margin-top: 0;
+  }
+  .gallery-section__card:nth-child(9n + 2) {
+    margin-top: 0;
+  }
 }
 
 .card__link {
@@ -556,6 +591,15 @@ ul {
   opacity: 1;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .card__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: box-shadow var(--transition-duration) var(--animation-timing);
+  }
+}
+
 .card-image__overlay {
   position: relative;
   overflow: hidden;
@@ -567,9 +611,16 @@ ul {
   height: auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .card__img {
-    width: 100%;
+    width: 450px;
+    height: 294px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .card__img {
+    width: 354px;
     height: 294px;
   }
 }
@@ -604,6 +655,13 @@ ul {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .card-image__overlay-text {
+    padding-top: 49px;
+    padding-bottom: 49px;
+  }
+}
+
 .card__name {
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
@@ -612,6 +670,12 @@ ul {
   padding-bottom: 20px;
   padding-right: 24px;
   padding-left: 24px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .card__name {
+    flex-grow: 1;
+  }
 }
 
 .card__title {
@@ -1251,8 +1315,13 @@ ul {
 
 @media screen and (max-width: 1199px) {
   .team-section__title {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
+}
+
+.team-section__list {
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1275,6 +1344,7 @@ ul {
   background-color: var(--primary-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  margin: 15px;
 }
 
 @media screen and (max-width: 767px) {
@@ -1290,11 +1360,9 @@ ul {
 @media screen and (min-width: 768px) {
   .staff-card {
     width: calc((100% - 4 * 15px) / 2);
-    margin-left: 15px;
-    margin-right: 15px;
   }
   .staff-card:nth-child(1n + 3) {
-    margin-top: 30px;
+    margin-bottom: 0px;
   }
 }
 

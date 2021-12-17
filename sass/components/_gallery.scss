@@ -16,20 +16,40 @@
     display: flex;
     flex-wrap: wrap;
   }
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .gallery-section__card {
   @media screen and(max-width: 767px) {
-    margin-left: 0;
+    margin-top: 0;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
-  margin-left: 30px;
-  margin-bottom: 30px;
-  &:nth-child(1n + 7) {
-    margin-bottom: 0px;
+  @media screen and(min-width: 1200px) {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    &:nth-child(1n + 7) {
+      margin-bottom: 0px;
+    }
+    &:nth-child(3n + 1) {
+      margin-top: 0;
+    }
   }
-  &:nth-child(3n + 1) {
-    margin-left: 0;
+  @media screen and(min-width: 768px) {
+    width: calc((100% - 4 * 15px) / 2);
+    &:first-child {
+      margin-top: 0;
+    }
+    &:nth-child(9n + 2) {
+      margin-top: 0;
+    }
   }
+  margin: 15px;
 }
 
 .card__link {
@@ -45,6 +65,12 @@
     transform: translateY(0);
     opacity: 1;
   }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: box-shadow var(--transition-duration) var(--animation-timing);
+  }
 }
 
 .card-image__overlay {
@@ -53,8 +79,12 @@
 }
 
 .card__img {
-  @media screen and(max-width: 768px) {
-    width: 100%;
+  @media screen and(max-width: 767px) {
+    width: 450px;
+    height: 294px;
+  }
+  @media screen and(min-width: 768px) and (max-width: 1199px) {
+    width: 354px;
     height: 294px;
   }
   display: block;
@@ -66,6 +96,10 @@
   @media screen and(max-width: 767px) {
     padding-top: 77px;
     padding-bottom: 77px;
+  }
+  @media screen and(min-width: 768px) and (max-width: 1199px) {
+    padding-top: 49px;
+    padding-bottom: 49px;
   }
   padding-top: 63px;
   padding-right: 24px;
@@ -99,6 +133,9 @@
 }
 
 .card__name {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-grow: 1;
+  }
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;

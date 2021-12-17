@@ -63,6 +63,10 @@
 }
 
 .card-image__overlay-text {
+  @media screen and(max-width: 767px) {
+    padding-top: 77px;
+    padding-bottom: 77px;
+  }
   padding-top: 63px;
   padding-right: 24px;
   padding-bottom: 63px;

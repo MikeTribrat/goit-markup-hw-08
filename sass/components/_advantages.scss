@@ -11,22 +11,18 @@
   @media (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -15px;
-    margin-right: -15px;
   }
   @media (min-width: 1200px) {
     display: flex;
     flex-wrap: nowrap;
   }
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .advantages-section__card {
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1199px) {
     width: calc((100% - 4 * 15px) / 2);
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
     margin-bottom: 30px;
     &:nth-child(1n + 3) {
       margin-bottom: 0px;
@@ -38,6 +34,7 @@
       margin-bottom: 0px;
     }
   }
+  margin: 15px;
   position: relative;
 }
 
@@ -66,16 +63,7 @@
 
 .advantages-section__text {
   @media screen and (min-width: 0px) and (max-width: 767px) {
-    height: 75px;
-    &:nth-child(1n + 1) {
-      height: 50px;
-    }
-  }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    height: 75px;
-    &:nth-child(1n + 3) {
-      height: 50px;
-    }
+    height: 50px;
   }
   margin-top: 0;
   margin-bottom: 0;

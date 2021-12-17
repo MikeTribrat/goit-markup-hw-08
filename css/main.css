@@ -841,6 +841,13 @@ ul {
   text-align: center;
 }
 
+@media (max-width: 767px) {
+  .hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+}
+
 .hero__overlay {
   max-width: 1600px;
   height: 600px;
@@ -854,6 +861,7 @@ ul {
 
 @media (max-width: 767px) {
   .hero__overlay {
+    height: 400px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header_mobile@1.jpg");
   }
 }
@@ -1221,7 +1229,7 @@ ul {
   color: var(--primary-text-color);
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1199px) {
   .team-section__title {
     margin-bottom: 30px;
   }

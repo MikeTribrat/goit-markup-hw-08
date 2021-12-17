@@ -1,4 +1,8 @@
 .hero {
+  @media (max-width: 767px) {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
   padding-top: 200px;
   padding-bottom: 200px;
 
@@ -8,6 +12,7 @@
 
 .hero__overlay {
   @media (max-width: 767px) {
+    height: 400px;
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),

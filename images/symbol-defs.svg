@@ -80,5 +80,8 @@
 <symbol id="icon-menu-mobile" viewBox="0 0 48 32">
 <path d="M0 5.333v-5.333h48v5.333h-48zM0 18.667h48v-5.333h-48v5.333zM0 32h48v-5.333h-48v5.333z"></path>
 </symbol>
+<symbol id="icon-line" viewBox="0 0 1 32">
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.4545" d="M0.727 0v32"></path>
+</symbol>
 </defs>
 </svg>

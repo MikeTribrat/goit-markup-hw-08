@@ -98,16 +98,21 @@ ul {
 }
 
 .advantages-section__card {
-  margin: 15px;
+  margin-right: 15px;
+  margin-left: 15px;
   position: relative;
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .advantages-section__card {
     width: calc((100% - 4 * 15px) / 2);
+    margin-top: 0;
   }
   .advantages-section__card:nth-child(1n + 3) {
     margin-bottom: 0px;
+  }
+  .advantages-section__card:nth-child(1n + 3) {
+    margin-top: 15px;
   }
 }
 
@@ -148,11 +153,11 @@ ul {
 .advantages-section__text {
   margin-top: 0;
   margin-bottom: 0;
-  height: 75px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  color: var(--secodary-text-color);
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
@@ -258,9 +263,19 @@ ul {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .footer__block {
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__block {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
   }
 }
 
@@ -303,10 +318,17 @@ ul {
   margin-left: 70px;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .footer-social-net__block {
     margin-top: 60px;
     margin-left: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-social-net__block {
+    margin-top: 0px;
+    margin-left: 165px;
   }
 }
 
@@ -513,18 +535,6 @@ ul {
   margin-right: 0;
 }
 
-/*.gallery-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.gallery-section__block {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-}*/
 .gallery-section__list {
   margin-left: -15px;
   margin-right: -15px;
@@ -1068,7 +1078,7 @@ ul {
 @media screen and (max-width: 1199px) {
   .header-menu__logo {
     font-size: 24px;
-    line-height: 28px;
+    line-height: 1.16;
   }
 }
 
@@ -1079,6 +1089,13 @@ ul {
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--third-text-color);
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-menu__logo {
+    font-size: 24px;
+    line-height: 1.16;
+  }
 }
 
 .header-menu__logo--theme-black {
@@ -1719,6 +1736,11 @@ ul {
 
 .mobile-menu-social-contacts__decor {
   color: rgba(33, 33, 33, 0.2);
+}
+
+.line {
+  outline: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
 }
 
 .visually-hidden {

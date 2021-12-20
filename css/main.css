@@ -742,6 +742,12 @@ ul {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header-menu__nav {
+    margin-left: 88px;
+  }
+}
+
 .header-menu__item {
   position: relative;
   margin-right: 50px;
@@ -814,7 +820,7 @@ ul {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .header-contacts {
     flex-direction: column;
-    align-items: flex-start;
+    margin-left: 84px;
   }
 }
 
@@ -858,6 +864,21 @@ ul {
   .header-contacts__link {
     padding-top: 21px;
     padding-bottom: 21px;
+    line-height: 1.16;
+    font-size: 12px;
+  }
+  .header-contacts__link:first-child {
+    padding-bottom: 5px;
+  }
+  .header-contacts__link:last-child {
+    padding-top: 5px;
+  }
+  .header-contacts__link:hover, .header-contacts__link:focus {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: var(--third-text-color);
   }
 }
 

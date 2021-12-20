@@ -134,9 +134,13 @@
         <h2 class="team-section__title">Наша команда</h2>
         <ul class="team-section__list">
           <li class="staff-card">
-            <img class="staff-card__img" 
-            srcset="./images/staff1@1.jpg 1x, ./images/staff1@2.jpg 2x"
-            src="./images/staff1@1.jpg" width="270" alt="product designer">
+            <div class="card-image__overlay">
+              <picture>
+                <source srcset="./images/staff1_desktop@1.jpg 1x, ./images/staff1_desktop@2.jpg 2x" media="(min-width:1200px)" />
+                <source srcset="./images/staff1_tablet@1.jpg 1x, ./images/staff1_tablet@2.jpg 2x" media="(min-width:768px)" />
+                <source srcset="./images/staff1_mobile@1.jpg 1x, ./images/staff1_mobile@2.jpg 2x" media="(min-width:480px)" />
+                <img class="staff-card__img" src="./images/staff1_mobile@1.jpg" width="270" alt="product designer">
+              </picture>
             <div class="staff-card__text-block">
               <h3 class="staff-card__name">Игорь Демьяненко</h3>
               <p class="staff-card__position">Product Designer</p>
@@ -173,8 +177,12 @@
             </div>
           </li>
           <li class="staff-card">
-            <img class="staff-card__img" 
-            srcset="./images/staff2@2.jpg" src="./images/staff2@1.jpg" width="270" alt="product designer">
+            <picture>
+              <source srcset="./images/staff2_desktop@1.jpg 1x, ./images/staff2_desktop@2.jpg 2x" media="(min-width:1200px)" />
+              <source srcset="./images/staff2_tablet@1.jpg 1x, ./images/staff2_tablet@2.jpg 2x" media="(min-width:768px)" />
+              <source srcset="./images/staff2_mobile@1.jpg 1x, ./images/staff2_mobile@2.jpg 2x" media="(min-width:480px)" />
+              <img class="staff-card__img" src="./images/staff2_mobile@1.jpg" width="270" alt="frontend developer">
+            </picture>
             <div class="staff-card__text-block">
               <h3 class="staff-card__name">Ольга Репина</h3>
               <p class="staff-card__position">Frontend Developer</p>
@@ -211,8 +219,12 @@
             </div>
           </li>
           <li class="staff-card">
-            <img class="staff-card__img" 
-            srcset="./images/staff3@2.jpg" src="./images/staff3@1.jpg" width="270" alt="product designer">
+            <picture>
+              <source srcset="./images/staff3_desktop@1.jpg 1x, ./images/staff3_desktop@2.jpg 2x" media="(min-width:1200px)" />
+              <source srcset="./images/staff3_tablet@1.jpg 1x, ./images/staff3_tablet@2.jpg 2x" media="(min-width:768px)" />
+              <source srcset="./images/staff3_mobile@1.jpg 1x, ./images/staff3_mobile@2.jpg 2x" media="(min-width:480px)" />
+              <img class="staff-card__img" src="./images/staff3_mobile@1.jpg" width="270" alt="marketing">
+            </picture>
             <div class="staff-card__text-block">
               <h3 class="staff-card__name">Николай Тарасов</h3>
               <p class="staff-card__position">Marketing</p>
@@ -249,8 +261,12 @@
             </div>
           </li>
           <li class="staff-card">
-            <img class="staff-card__img" 
-            srcset="./images/staff4@2.jpg" src="./images/staff4@1.jpg" width="270" alt="product designer">
+            <picture>
+              <source srcset="./images/staff4_desktop@1.jpg 1x, ./images/staff4_desktop@2.jpg 2x" media="(min-width:1200px)" />
+              <source srcset="./images/staff4_tablet@1.jpg 1x, ./images/staff4_tablet@2.jpg 2x" media="(min-width:768px)" />
+              <source srcset="./images/staff4_mobile@1.jpg 1x, ./images/staff4_mobile@2.jpg 2x" media="(min-width:480px)" />
+              <img class="staff-card__img" src="./images/staff4_mobile@1.jpg" width="270" alt="ui designer">
+            </picture>
             <div class="staff-card__text-block">
               <h3 class="staff-card__name">Михаил Ермаков</h3>
               <p class="staff-card__position">UI Designer</p>

@@ -27,7 +27,7 @@
 }
 
 .clients-card {
-  @media (max-width: 767px) {
+  @media screen and(max-width: 767px) {
     width: calc((100% - 4 * 15px) / 2);
     margin-right: 15px;
     margin-left: 15px;
@@ -35,7 +35,7 @@
       margin-top: 30px;
     }
   }
-  @media (min-width: 768px) {
+  @media screen and(min-width: 768px) and (max-width: 1199px) {
     width: calc((100% - 6 * 15px) / 3);
     margin-right: 15px;
     margin-left: 15px;
@@ -44,11 +44,11 @@
     }
   }
   & + & {
-    @media (min-width: 1200px) {
+    @media screen and(min-width: 1200px) {
       margin-left: 30px;
-      width: 170px;
     }
   }
+  width: 170px;
   height: 92px;
 }
 

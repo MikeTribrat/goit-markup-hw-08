@@ -55,7 +55,9 @@
     flex-wrap: wrap;
     margin-bottom: 40px;
   }
+  display: flex;
   margin-bottom: 50px;
+  justify-content: center;
 }
 
 .filters-list__item {

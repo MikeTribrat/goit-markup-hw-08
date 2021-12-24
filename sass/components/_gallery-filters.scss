@@ -54,10 +54,11 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 40px;
+    justify-content: left;
   }
   display: flex;
   margin-bottom: 50px;
-  justify-content: left;
+  justify-content: center;
 }
 
 .filters-list__item {

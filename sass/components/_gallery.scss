@@ -38,6 +38,9 @@
     &:nth-child(9n + 2) {
       margin-top: 0;
     }
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 

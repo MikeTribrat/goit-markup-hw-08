@@ -22,6 +22,11 @@
 
 .modal {
   @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 450px;
     height: 609px;
   }
@@ -48,6 +53,10 @@
 }
 
 .modal__button--close {
+  @media screen and (max-width: 768px) {
+    top: 20px;
+    right: 20px;
+  }
   display: flex;
   position: absolute;
   width: 30px;
